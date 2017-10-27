@@ -14,6 +14,9 @@
     state: started
     enabled: yes
 
+- name: Ensure directory
+  file: path=/opt/kibana/config state=directory
+
 - name: Copy Kibana configuration.
   template:
     src: kibana.yml.j2
